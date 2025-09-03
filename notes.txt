@@ -1,0 +1,109 @@
+Get Images
+----------
+[ ] Profile Picture - 550 x 550 pixels
+
+[ ] Projects - 2x Each - Square - 550 x 550 pixels for Main Shot - 1200 x 550px for Additional Shots
+  - Random Quote Generator [ ]
+  - Data Pagination and Filtering [ ]
+  - Interactive Form [ ]
+  - Game Show App [ ]
+  - Public API Requests [ ]
+  - Static Node.js and Express Site [ ]
+
+  --------
+  Instructions
+  --------
+  1. Initiate Your Project
+    [X] - Open CLI, Navigate to Project Directory, Run 'npm init -y' to setup package.json Filtering
+    [X] - Install Express and Pug
+    [X] - Create a .gitignore file and save a reference to 'node_modules/' so repo doesn't store or track that folder
+  ---
+  2. Add Your Images and Templates
+    [X] - Create an images folder in directory
+    [ ] - Add a profile picture of yourself
+    [ ] - Take screenshots of your projects. At least 2x Each
+    [/] - Add provided views folder with Pug templates to root
+  ---
+  3. Add Your Project Data
+    [X] - Create a data.json file in root
+    [ ] - Recommended structure is single property called 'projects', value of projects is an array containing an object for each project you wish to include in your portfolio
+    [ ] - Each object should contain the following properties
+          -- id
+          -- project_name
+          -- description
+          -- technologies (array of strings listing technologies used in project)
+          -- live_link (link to the live version of the project, can be hosted for free on GitHub Pages)
+          -- github_link
+          -- image_urls (array of strings containing file paths from views folder to images themselves, main image shown on landing page, 1-3 more on project page)
+  ---
+  4. Setup Server, Routes, Middleware
+    [X] - Create an app.js file at root
+    [ ] - Add variables to require necessary dependencies
+          -- express
+          -- data.json
+          -- the path module which can be used when setting the absolute path in the express.static function (optional)
+    [ ] - Set up your middleware
+          -- Set your "view engine" to "pug"
+          -- use a static route and the express.static method to serve the static files located in the public folder
+    [ ] - Set your Routes
+          -- An index route ('/') to render the home page with locals set to data.projects
+          -- An about route ('/about') to render the about page
+          -- Dynamic project routes ('/project/:id') or ('/projects/:id') based on the id of the project that render a customized version of the Pug project template to show off each project - means adding data, or 'locals', as an object that contains data to passed to the Pug template
+    [ ] - Start your server
+          -- Your app should listen on port 3000, and log a string to the console that says which port the app is listening to
+  ---
+  5. Handle Errors
+    [ ] Non-existent or undefined route -or- if a request for a resource fails, app should handle the problem in a user-friendly way (near bottom of app.js)
+    [ ] - Create 404 hanlder
+          -- 404 should create a custom new Error()
+          -- Set its status property to 404
+          -- Set its message property to a user-friendly message
+          -- Should log out new error's message and status properties
+    [ ] - Global Error hanlder
+          -- Deal with server errors the app encounters
+          -- Ensure there is an err.status peroperty
+          -- And err.message property if they don't already exist
+          -- Log out the err objects ^ 
+    [ ] - Test your error handling by pointing the browser at a few undefined routes
+    [ ] - Temporarily throw 500 error in one of your routes, then navigating to the page for that route
+  ---
+  6. Complete your Pug files
+    [ ] - Go through each of the four Pug templates to inject your data. The Pug files contain comments that detail each change. These comments should be deleted once you have everything working properly
+    [ ] - Add target attribute set to _blank on the a tags for live/github links to your projects - new window
+  ---
+  7. Layout, CSS, and Styles
+    [ ] - The layout of the finished project should match the provided mockups
+  ---
+  8. Finishing the Project
+    [ ] - Code Comments
+    [ ] - Code Readability
+    [ ] - Quality Assurance Testing
+          -- Open and run your app
+          -- Open Chrome DevTools console
+          -- Pretend to be a user and test all aspects of functionality and every possible state of the app while monitoring the console for bugs and resolving issues that arise
+-------
+Extra Credit
+-------
+  1. Customize the package.json file
+    [ ] - Set up your package.json file so that running npm start will run the app
+  ---
+  2. Render Helpful Pug Templates in Error-Handling Middleware
+    [ ] - Create two new Pug Templates in the views folder a
+          -- error.pug
+          -- page-not-found.pug
+          -- They should extend the layout
+          -- Be set to block content
+          -- Display the error's message, status, and the stack properties
+    [ ] Templates should include a link back to the home page
+  ---
+  3. Customize Styles
+    [ ] - Change or add at least three of the following:
+          -- Color
+          -- BG Color
+          -- Font
+          -- Box or Text Shadows
+          -- Transitions or animations
+          -- Custom Logo
+    [ ] - Document Style Changes in your README.md file
+          -- Do not alter layout or position of the important elements on the page
+          -- Add your changes to the end of the CSS file -or- Add your own CSS file and link it within the head of the layout.pug file (below other css links)
