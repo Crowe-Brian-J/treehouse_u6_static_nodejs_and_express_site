@@ -4,25 +4,20 @@ block content
 
   article.portfolio-intro
 
-    //- Replace with your own heading like 'My Portfolio', or 'Hey, Potential Employers', or 'Let's make the web great together!' 
-    h1 Heading
-
-    //- Replace with a description for your portfolio, what this project is, it's purpose, what it's supposed to accomplish, etc. 
-    p Portfolio description
-
+    //- Customize to fit my style
+    h1 Hey, Potential Employers
+    p Welcome to my portfolio! Here you'll find a collection of my web development projects, showcasing skills in design, interactivity, and full stack development
 
   article.portfolio-project-thumbs
     .projects-box.box.grid
-
-      //- Use the Pug `each` iterator to loop over the projects in your data file  
-      
-        //- Use the example Pug code below and interpolated template literals as needed to dynamically generate:
-          //- The paths in the link's href and img's src attributes
-          //- The text 'Thumbnail' interpolated with the project title for the img's alt attribute
-          //- The project title for the h5 element's text
-
-        .cell
-          a(href='#')
-            img.thumbnail(src='https://placehold.it/550x550', alt='')
-            h5 My Site
+      //- Loop through projects from data.json
+      each project in projects 
+        .cell 
+          a(href=`/project/${project.id}`)
+            //- Use first image in image_urls as thumbnail
+            if project.image_urls && project.image_urls.length
+              img.thumbnail(src=`/static/${project.image_urls[0]}`, alt=`Thumbnail of ${project.project_name}`)
+            else
+              img.thumbnail(src=`https://placehold.it/550x550`, alt=`Thumbnail placeholder for ${project.project_name}`)
+            h5= project.project_name
 
