@@ -37,6 +37,31 @@ app.get('/projects/:id', (req, res) => {
   }
 })
 
+// ----- Error Handling -----
+
+// 404 handler
+app.use((req, res, next) => {
+  const err = new Error('Sorry, the page you are looking for does not exist')
+  err.status = 404
+  console.error(`404 Error: ${err.message}`)
+  next(err)
+})
+
+// Global Error Handler
+app.use((err, req, res, next) => {
+  //Ensure err has a status and a message
+  err.status = err.status || 500
+  err.message = err.message || 'Oops! Something went wrong on the server.'
+
+  // Log out the error details
+  console.error(`Error Status: ${err.status}`)
+  console.error(`Error Message: ${err.message}`)
+
+  // Render error page with err details
+  res.status(err.status)
+  res.render('error', { err })
+})
+
 // ----- Start Server -----
 const PORT = 3000
 app.listen(PORT, () => {
