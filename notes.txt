@@ -8,7 +8,7 @@ Get Images
   - Interactive Form [ ]
   - Game Show App [ ]
   - Public API Requests [ ]
-  - Static Node.js and Express Site [ ]
+  - PiCross [ ]
 
   --------
   Instructions
@@ -26,8 +26,8 @@ Get Images
   ---
   3. Add Your Project Data
     [X] - Create a data.json file in root
-    [ ] - Recommended structure is single property called 'projects', value of projects is an array containing an object for each project you wish to include in your portfolio
-    [ ] - Each object should contain the following properties
+    [X] - Recommended structure is single property called 'projects', value of projects is an array containing an object for each project you wish to include in your portfolio
+    [X] - Each object should contain the following properties
           -- id
           -- project_name
           -- description
@@ -35,6 +35,7 @@ Get Images
           -- live_link (link to the live version of the project, can be hosted for free on GitHub Pages)
           -- github_link
           -- image_urls (array of strings containing file paths from views folder to images themselves, main image shown on landing page, 1-3 more on project page)
+    [ ] - Update README.md for each
   ---
   4. Setup Server, Routes, Middleware
     [X] - Create an app.js file at root
