@@ -54,13 +54,13 @@ Get Images
           -- Your app should listen on port 3000, and log a string to the console that says which port the app is listening to
   ---
   5. Handle Errors
-    [ ] Non-existent or undefined route -or- if a request for a resource fails, app should handle the problem in a user-friendly way (near bottom of app.js)
-    [ ] - Create 404 hanlder
+    [X] Non-existent or undefined route -or- if a request for a resource fails, app should handle the problem in a user-friendly way (near bottom of app.js)
+    [X] - Create 404 hanlder
           -- 404 should create a custom new Error()
           -- Set its status property to 404
           -- Set its message property to a user-friendly message
           -- Should log out new error's message and status properties
-    [ ] - Global Error hanlder
+    [X] - Global Error hanlder
           -- Deal with server errors the app encounters
           -- Ensure there is an err.status peroperty
           -- And err.message property if they don't already exist
