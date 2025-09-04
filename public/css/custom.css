@@ -1,7 +1,9 @@
 /* ----- Custom Styles ----- */
 
-/* 1. Change background color */
-
+/* 1. Change color for sidebar h5/header */
+#my-info.sidebar h5, .header {
+  color: #2774ae;
+}
 
 /* 2. Add a new font */
 

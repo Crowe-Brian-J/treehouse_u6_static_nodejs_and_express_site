@@ -10,7 +10,10 @@ const app = express()
 app.set('view engine', 'pug')
 
 // Serve static files from public folder
-app.use('/static', express.static(path.join(__dirname, 'public')))
+app.use(
+  '/static',
+  express.static(path.join(__dirname, 'public'), { fallthrough: true })
+)
 
 // ----- Routes -----
 
@@ -40,19 +43,26 @@ app.get('/project/:id', (req, res, next) => {
 
 // ----- Error Handling -----
 
+app.use('/static', (req, res, next) => {
+  // If a static file was requested but doesn't exist, just end
+  if (
+    req.path.endsWith('.css') ||
+    req.path.endsWith('.js') ||
+    req.path.endsWith('.png') ||
+    req.path.endsWith('.ico')
+  ) {
+    return res.end()
+  }
+  next()
+})
+
 // 404 handler
 app.use((req, res, next) => {
-  // Ignore static assets
-  if (
-    req.originalUrl.startsWith('/static/') ||
-    req.originalUrl.endsWith('.ico')
-  ) {
-    return next() // skip logging for these files
-  }
+  // Handle missing pages/routes
   const err = new Error('Sorry, the page you are looking for does not exist')
   err.status = 404
-  console.error(`404 Error: ${err.message}`)
-  res.status(404).render('page-not-found', { err }) // render page-not-found.pug directly
+  console.error(`404 Error: ${err.message} - URL: ${req.originalUrl}`)
+  res.status(404).render('page-not-found', { err }) // render page-not-found.pug
 })
 
 // Global error handler
