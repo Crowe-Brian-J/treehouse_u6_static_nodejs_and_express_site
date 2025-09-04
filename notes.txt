@@ -65,15 +65,15 @@ Get Images
           -- Ensure there is an err.status peroperty
           -- And err.message property if they don't already exist
           -- Log out the err objects ^ 
-    [ ] - Test your error handling by pointing the browser at a few undefined routes
-    [ ] - Temporarily throw 500 error in one of your routes, then navigating to the page for that route
+    [X] - Test your error handling by pointing the browser at a few undefined routes
+    [X] - Temporarily throw 500 error in one of your routes, then navigating to the page for that route
   ---
   6. Complete your Pug files
-    [ ] - Go through each of the four Pug templates to inject your data. The Pug files contain comments that detail each change. These comments should be deleted once you have everything working properly
-    [ ] - Add target attribute set to _blank on the a tags for live/github links to your projects - new window
+    [X] - Go through each of the four Pug templates to inject your data. The Pug files contain comments that detail each change. These comments should be deleted once you have everything working properly
+    [X] - Add target attribute set to _blank on the a tags for live/github links to your projects - new window
   ---
   7. Layout, CSS, and Styles
-    [ ] - The layout of the finished project should match the provided mockups
+    [X] - The layout of the finished project should match the provided mockups
   ---
   8. Finishing the Project
     [ ] - Code Comments
@@ -86,7 +86,7 @@ Get Images
 Extra Credit
 -------
   1. Customize the package.json file
-    [ ] - Set up your package.json file so that running npm start will run the app
+    [X] - Set up your package.json file so that running npm start will run the app
   ---
   2. Render Helpful Pug Templates in Error-Handling Middleware
     [ ] - Create two new Pug Templates in the views folder a

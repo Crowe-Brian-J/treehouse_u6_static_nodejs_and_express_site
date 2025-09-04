@@ -32,7 +32,6 @@ app.get('/project/:id', (req, res, next) => {
   if (project) {
     res.render('project', { project })
   } else {
-    // If no project found, render a 404 page
     const err = new Error('Project not found') // <- create Error object
     err.status = 404
     next(err) // pass it to the global error handler
@@ -46,22 +45,16 @@ app.use((req, res, next) => {
   const err = new Error('Sorry, the page you are looking for does not exist')
   err.status = 404
   console.error(`404 Error: ${err.message}`)
-  next(err)
+  res.status(404).render('page-not-found', { err }) // render page-not-found.pug directly
 })
 
-// Global Error Handler
+// Global error handler
 app.use((err, req, res, next) => {
-  //Ensure err has a status and a message
   err.status = err.status || 500
   err.message = err.message || 'Oops! Something went wrong on the server.'
-
-  // Log out the error details
   console.error(`Error Status: ${err.status}`)
   console.error(`Error Message: ${err.message}`)
-
-  // Render error page with err details
-  res.status(err.status)
-  res.render('error', { err })
+  res.status(err.status).render('error', { err }) // render error.pug for all other errors
 })
 
 // ----- Start Server -----
