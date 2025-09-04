@@ -42,6 +42,13 @@ app.get('/project/:id', (req, res, next) => {
 
 // 404 handler
 app.use((req, res, next) => {
+  // Ignore static assets
+  if (
+    req.originalUrl.startsWith('/static/') ||
+    req.originalUrl.endsWith('.ico')
+  ) {
+    return next() // skip logging for these files
+  }
   const err = new Error('Sorry, the page you are looking for does not exist')
   err.status = 404
   console.error(`404 Error: ${err.message}`)
