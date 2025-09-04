@@ -25,7 +25,7 @@ app.get('/about', (req, res) => {
 })
 
 // Dynamic project route - renders project page by id
-app.get('/projects/:id', (req, res) => {
+app.get('/project/:id', (req, res, next) => {
   const projectId = parseInt(req.params.id, 10)
   const project = data.projects.find((p) => p.id === projectId)
 
@@ -33,7 +33,9 @@ app.get('/projects/:id', (req, res) => {
     res.render('project', { project })
   } else {
     // If no project found, render a 404 page
-    res.status(404).render('error', { message: 'Project not found' })
+    const err = new Error('Project not found') // <- create Error object
+    err.status = 404
+    next(err) // pass it to the global error handler
   }
 })
 

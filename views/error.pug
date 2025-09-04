@@ -1,0 +1,19 @@
+extends layout.pug
+
+block content
+  .error-page
+    h1 Oops! Something went wrong.
+    
+    if err && err.status
+      h2 Error #{err.status}
+    else if message
+      h2 Error
+
+    if err && err.message
+      h3= err.message
+    else if message
+      p= message
+    else
+      p Sorry, an unexpected error occurred.
+
+    a.btn(href='/') &larr; Back to Home
