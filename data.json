@@ -49,11 +49,14 @@
     {
       "id": 5,
       "project_name": "PiCross",
-      "description": "",
+      "description": "The game picross, or nonograms, challenges players to deduce a hidden image by filling in (or leaving blank) squares on a grid, based on numerical clues provided for each row and column. I developed this as my first JavaScript project in 2023.",
       "technologies": ["JavaScript", "CSS", "HTML"],
-      "live_link": "",
+      "live_link": "https://economic-balance.surge.sh",
       "github_link": "https://github.com/Crowe-Brian-J/project1_picross",
-      "image_urls": [""]
+      "image_urls": [
+        "images/picross/blankboard.png",
+        "images/picross/solvedboard.png"
+      ]
     }
   ]
 }

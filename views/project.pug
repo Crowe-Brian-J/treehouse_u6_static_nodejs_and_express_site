@@ -31,7 +31,7 @@ block content
     .project-img-box.box
       //- Loop trhough image_urls array
       if project.image_urls && project.image_urls.length 
-        each img in project.image_urls 
+        each img, i in project.image_urls 
           img.project-img(src=`/static/${img}`, alt=`${project.project_name} screenshot ${i+1}`)
 
     nav.nav

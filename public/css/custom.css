@@ -1,7 +1,7 @@
 /* ----- Custom Styles ----- */
 
-/* 1. Change color for sidebar h5/header */
-#my-info.sidebar h5, .header {
+/* 1. Change color for sidebar h5/header/projects-box cell h5 */
+#my-info.sidebar h5, .header, .projects-box .cell h5 {
   color: #2774ae;
 }
 
