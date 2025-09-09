@@ -1,13 +1,13 @@
 Get Images
 ----------
-[ ] Profile Picture - 550 x 550 pixels
+[ ] Profile Picture - 550 x 350 pixels
 
-[ ] Projects - 2x Each - Square - 550 x 550 pixels for Main Shot - 1200 x 550px for Additional Shots
+[X] Projects - 2x Each - Square - 550 x 550 pixels for Main Shot - 1200 x 550px for Additional Shots
   - Random Quote Generator [X]
-  - Data Pagination and Filtering [ ]
-  - Interactive Form [ ]
-  - Game Show App [ ]
-  - Public API Requests [ ]
+  - Data Pagination and Filtering [X]
+  - Interactive Form [X]
+  - Game Show App [X]
+  - Public API Requests [X]
   - PiCross [X]
 
   --------
@@ -35,7 +35,7 @@ Get Images
           -- live_link (link to the live version of the project, can be hosted for free on GitHub Pages)
           -- github_link
           -- image_urls (array of strings containing file paths from views folder to images themselves, main image shown on landing page, 1-3 more on project page)
-    [ ] - Update README.md for each
+    [X] - Update README.md for each
   ---
   4. Setup Server, Routes, Middleware
     [X] - Create an app.js file at root
@@ -76,9 +76,9 @@ Get Images
     [X] - The layout of the finished project should match the provided mockups
   ---
   8. Finishing the Project
-    [ ] - Code Comments
-    [ ] - Code Readability
-    [ ] - Quality Assurance Testing
+    [X] - Code Comments
+    [X] - Code Readability
+    [X] - Quality Assurance Testing
           -- Open and run your app
           -- Open Chrome DevTools console
           -- Pretend to be a user and test all aspects of functionality and every possible state of the app while monitoring the console for bugs and resolving issues that arise
@@ -89,13 +89,13 @@ Extra Credit
     [X] - Set up your package.json file so that running npm start will run the app
   ---
   2. Render Helpful Pug Templates in Error-Handling Middleware
-    [ ] - Create two new Pug Templates in the views folder a
+    [X] - Create two new Pug Templates in the views folder a
           -- error.pug
           -- page-not-found.pug
           -- They should extend the layout
           -- Be set to block content
           -- Display the error's message, status, and the stack properties
-    [ ] Templates should include a link back to the home page
+    [X] Templates should include a link back to the home page
   ---
   3. Customize Styles
     [ ] - Change or add at least three of the following:

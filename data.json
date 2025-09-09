@@ -79,6 +79,7 @@
       "live_link": "https://economic-balance.surge.sh",
       "github_link": "https://github.com/Crowe-Brian-J/project1_picross",
       "image_urls": [
+        "images/picross/preview.png",
         "images/picross/blankboard.png",
         "images/picross/solvedboard.png"
       ]

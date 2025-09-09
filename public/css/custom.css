@@ -5,8 +5,18 @@
   color: #2774ae;
 }
 
-/* 2. Add a new font */
+/* 2. Change background color of sidebar and header */
+.sidebar, .header {
+  background: #081823;
+}
 
+/* 3a. Make project thumbnails grayscale by default */
+.projects-box .cell img.thumbnail {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
 
-/* 3. Add subtle box shadow to project cards */
-
+/* 3b. On hover, show full color, */
+.projects-box .cell img.thumbnail:hover {
+  filter: grayscale(0%);
+}
