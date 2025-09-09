@@ -60,11 +60,16 @@
     {
       "id": 4,
       "project_name": "Public API Requests",
-      "description": "",
+      "description": "This project is a Web app that retrieves random employee profiles from the Random User Generator API and presents them in a visually appealing, searchable gallery. It fetches and displays 12 employees from the U.S., allows users to search by name, and enables viewing detailed employee information in a modal window. The modal includes previous/next navigation, gracefully handling edge cases (e.g., disabling navigation at the first or last employee), and supports multiple ways to close it—including an “X” button, pressing the ESC key, or clicking outside the modal. The interface is enhanced with thoughtful custom styling—such as card hover effects, transitions, custom shadows, border radii, improved search input visuals, and a modal animation—delivering a responsive, engaging user experience built with HTML, CSS, and modern JavaScript.",
       "technologies": ["JavaScript", "CSS", "HTML"],
-      "live_link": "",
+      "live_link": "https://crowe-brian-j.github.io/treehouse_u5_public_api_requests/",
       "github_link": "https://github.com/Crowe-Brian-J/treehouse_u5_public_api_requests",
-      "image_urls": [""]
+      "image_urls": [
+        "images/publicapi/preview.png",
+        "images/publicapi/fullpage.png",
+        "images/publicapi/search.png",
+        "images/publicapi/modal.png"
+      ]
     },
     {
       "id": 5,
