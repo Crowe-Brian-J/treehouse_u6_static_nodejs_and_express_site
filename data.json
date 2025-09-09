@@ -3,7 +3,7 @@
     {
       "id": 0,
       "project_name": "Random Quote Generator",
-      "description": "",
+      "description": "A polished implementation of the classic Random Quote Generator. It is well structured and documented. It includes enhancements like automatic refreshing and dynamic backgrounds.",
       "technologies": ["JavaScript", "CSS", "HTML"],
       "live_link": "https://crowe-brian-j.github.io/treehouse_u1_random_quote_generator/",
       "github_link": "https://github.com/Crowe-Brian-J/treehouse_u1_random_quote_generator",
@@ -17,30 +17,45 @@
     {
       "id": 1,
       "project_name": "Data Pagination and Filtering",
-      "description": "",
+      "description": "Data Pagination and Filtering is a vanilla JavaScript project that demonstrates how to manage and present large sets of information in a user-friendly way. The application takes a predefined dataset (such as a list of students), splits it into smaller, more manageable pages, and provides controls to navigate between them. It also includes a search filter so users can quickly narrow down results by typing in a name or keyword. This project showcases skills in DOM manipulation, dynamic rendering, event handling, and responsive UI design using only vanilla JavaScript, HTML, and CSS. It emphasizes clean code organization and accessibility while solving a common web development challenge: making data easy to browse and interact with.",
       "technologies": ["JavaScript", "CSS", "HTML"],
-      "live_link": "",
+      "live_link": "https://crowe-brian-j.github.io/treehouse_u2_data_pagination_and_filtering/",
       "github_link": "https://github.com/Crowe-Brian-J/treehouse_u2_data_pagination_and_filtering",
       "github_update_necessary": true,
-      "image_urls": [""]
+      "image_urls": [
+        "images/dpf/first.png",
+        "images/dpf/second.png",
+        "images/dpf/third.png",
+        "images/dpf/filtered.png"
+      ]
     },
     {
       "id": 2,
       "project_name": "Interactive Form",
-      "description": "",
+      "description": "This Interactive Form project, built with HTML, CSS, and JavaScript, enhances a standard web form with dynamic and user-friendly features. It includes real-time validation powered by a reusable validateField function, giving users immediate feedback with hints, error styles, and checkmark indicators. The form adapts dynamically by showing or hiding the “Other job role” field, enabling or disabling t-shirt color options based on the chosen theme, and calculating the total cost of selected activities. Conditional logic ensures that credit card fields are only validated when credit card payment is selected, while accessibility is supported through clear focus states, visual cues, and validation messaging. The form prevents submission until all required fields pass validation, ensuring a smooth and accessible user experience.",
       "technologies": ["JavaScript", "CSS", "HTML"],
-      "live_link": "",
+      "live_link": "https://crowe-brian-j.github.io/treehouse_u3_interactive_form/",
       "github_link": "https://github.com/Crowe-Brian-J/treehouse_u3_interactive_form",
-      "image_urls": [""]
+      "image_urls": [
+        "images/iform/preview.png",
+        "images/iform/second.png",
+        "images/iform/third.png",
+        "images/iform/disabled_options.png"
+      ]
     },
     {
       "id": 3,
       "project_name": "Game Show App",
-      "description": "",
+      "description": "This Game Show App (Treehouse Unit 4) recreates the classic “Wheel of Fortune” spirit using HTML, CSS, and JavaScript. It features a Phrase class to build and manage the display of letter placeholders, a Game class for core gameplay logic—such as handling player guesses, tracking missed attempts, revealing matched letters, managing lives, and determining win/loss outcomes—and an intuitive app script wiring everything together via event listeners for both on-screen and physical keyboard inputs. To go above and beyond the project requirements, several enhancements have been added: twenty unique phrases to keep gameplay fresh; animations and styling that evoke retro arcade aesthetics; improved keyboard interactions with visual feedback (like shaking repeated guesses, color-coded correctness, and color–blind–friendly contrast); and mobile-responsive layout adjustments to ensure the game fits and plays well across devices—all while preserving the precise alignment of letter tiles and game state resets needed for restart functionality.",
       "technologies": ["JavaScript", "CSS", "HTML"],
-      "live_link": "",
+      "live_link": "https://crowe-brian-j.github.io/treehouse_u4_game_show_app/",
       "github_link": "https://github.com/Crowe-Brian-J/treehouse_u4_game_show_app",
-      "image_urls": [""]
+      "image_urls": [
+        "images/gameshow/preview.png",
+        "images/gameshow/start.png",
+        "images/gameshow/blank.png",
+        "images/gameshow/win.png"
+      ]
     },
     {
       "id": 4,

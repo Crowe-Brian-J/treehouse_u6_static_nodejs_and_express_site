@@ -3,12 +3,12 @@ Get Images
 [ ] Profile Picture - 550 x 550 pixels
 
 [ ] Projects - 2x Each - Square - 550 x 550 pixels for Main Shot - 1200 x 550px for Additional Shots
-  - Random Quote Generator [ ]
+  - Random Quote Generator [X]
   - Data Pagination and Filtering [ ]
   - Interactive Form [ ]
   - Game Show App [ ]
   - Public API Requests [ ]
-  - PiCross [ ]
+  - PiCross [X]
 
   --------
   Instructions
@@ -21,8 +21,8 @@ Get Images
   2. Add Your Images and Templates
     [X] - Create an images folder in directory
     [ ] - Add a profile picture of yourself
-    [ ] - Take screenshots of your projects. At least 2x Each
-    [/] - Add provided views folder with Pug templates to root
+    [X] - Take screenshots of your projects. At least 2x Each
+    [X] - Add provided views folder with Pug templates to root
   ---
   3. Add Your Project Data
     [X] - Create a data.json file in root
