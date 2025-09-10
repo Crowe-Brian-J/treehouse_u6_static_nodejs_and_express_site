@@ -5,18 +5,23 @@
   color: #2774ae;
 }
 
-/* 2. Change background color of sidebar and header */
-.sidebar, .header {
+/* 2a. Change background color of sidebar, header, & body - also, your default body css has two background colors */
+.sidebar, .header, .header button, body {
   background: #081823;
 }
 
-/* 3a. Make project thumbnails grayscale by default */
+/* 3. Set margin-top for h1 to 0 - On page not found renders, Brave's default top margin is active and created a bar at the top */
+h1 {
+  margin-top: 0;
+}
+
+/* 4a. Make project thumbnails grayscale by default */
 .projects-box .cell img.thumbnail {
   filter: grayscale(100%);
   transition: filter 0.3s ease-in-out;
 }
 
-/* 3b. On hover, show full color, */
+/* 4b. On hover, show full color, */
 .projects-box .cell img.thumbnail:hover {
   filter: grayscale(0%);
 }

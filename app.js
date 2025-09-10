@@ -19,12 +19,12 @@ app.use(
 
 // Index route - renders home page with all projects
 app.get('/', (req, res) => {
-  res.render('index', { projects: data.projects })
+  res.render('index', { projects: data.projects, currentPage: 'home' })
 })
 
 // About route - renders about page
 app.get('/about', (req, res) => {
-  res.render('about')
+  res.render('about', { currentPage: 'about' })
 })
 
 // Dynamic project route - renders project page by id
@@ -33,7 +33,7 @@ app.get('/project/:id', (req, res, next) => {
   const project = data.projects.find((p) => p.id === projectId)
 
   if (project) {
-    res.render('project', { project })
+    res.render('project', { project, currentPage: 'project' })
   } else {
     const err = new Error('Project not found') // <- create Error object
     err.status = 404

@@ -13,4 +13,7 @@
   [X] - App uses a static route to serve the static files in the public folder
 4. Templates
   [X] - EE - The error.pug and page-not-found.pug templates have been created and added to the views folder
-  [] - The following templates are present
+  [X] - The following templates are present:
+    layout.pug, index.pug, about.pug, project.pug
+  [] - Templates have all of the required information as exampled in the provided HTML and mockup files:
+    name, titles, descriptions, project descriptions, project images, links

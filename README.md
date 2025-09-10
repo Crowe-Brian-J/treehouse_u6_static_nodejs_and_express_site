@@ -14,7 +14,8 @@ This project is a static portfolio website built with Node.js and Express, desig
 [X] - Customize the Styles
   [X] - 1. Change at least three of the following:
     [X] - Changed the color for the sidebar h5/header/projects-box cell h5 to #2774AE
-    [X] - Changed the background color of the sidebar and header to #081823
+    [X] - Changed the background color of the sidebar, header, header button, and body to #081823 (default body css has two background colors in styles.css which I did not touch)
+    [X] - Set margin-top for h1 to 0. On page-not-found renders, Brave's default top margin is active and created a bar at the top of the page inconsistent with other rendered pages
     [X] - Make the project thumbnails grayscale by default and color them at a rate of 0.3s on hover
   [X] - 2. Document the style changes, right here in the README.md file
 
