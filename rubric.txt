@@ -1,0 +1,16 @@
+1. Initialize the app and add dependencies
+  [X] - EE - Running 'npm start' serves the app
+  [X] - /node_modulesis referenced in the .gitignore file and isn't in the repo
+  [X] - Running 'npm install' downloads all necessary dependencies
+  [X] - Running 'node app.js' serves the app
+2. Data
+  [X] - The data.json file is present
+  [X] - The data.json file contains a 'projects' property set to an array containing at least five objects that each contain the following properties:
+    id, project_name, description, technologies, live_link, github_link, image_urls
+3. Routes
+  [X] - The following routes do render teh appropriate pages:
+    '/' - Home Page, '/about' - About Page, '/project/:id' - Project Page
+  [X] - App uses a static route to serve the static files in the public folder
+4. Templates
+  [X] - EE - The error.pug and page-not-found.pug templates have been created and added to the views folder
+  [] - The following templates are present

@@ -37,7 +37,7 @@ app.get('/project/:id', (req, res, next) => {
   } else {
     const err = new Error('Project not found') // <- create Error object
     err.status = 404
-    next(err) // pass it to the global error handler
+    next(err) // pass it to error handlers
   }
 })
 
@@ -61,8 +61,7 @@ app.use((req, res, next) => {
   // Handle missing pages/routes
   const err = new Error('Sorry, the page you are looking for does not exist')
   err.status = 404
-  console.error(`404 Error: ${err.message} - URL: ${req.originalUrl}`)
-  res.status(404).render('page-not-found', { err }) // render page-not-found.pug
+  next(err) // pass to global handler for consistent handling
 })
 
 // Global error handler
@@ -71,7 +70,12 @@ app.use((err, req, res, next) => {
   err.message = err.message || 'Oops! Something went wrong on the server.'
   console.error(`Error Status: ${err.status}`)
   console.error(`Error Message: ${err.message}`)
-  res.status(err.status).render('error', { err }) // render error.pug for all other errors
+
+  if (err.status === 404) {
+    res.status(404).render('page-not-found', { err })
+  } else {
+    res.status(err.status).render('error', { err })
+  }
 })
 
 // ----- Start Server -----
