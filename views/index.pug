@@ -4,17 +4,14 @@ block content
 
   article.portfolio-intro
 
-    //- Customize to fit my style
     h1 Hey, Potential Employers
     p Welcome to my portfolio! Here you'll find a collection of my web development projects, showcasing skills in design, interactivity, and full stack development
 
   article.portfolio-project-thumbs
     .projects-box.box.grid
-      //- Loop through projects from data.json
       each project in projects 
         .cell 
           a(href=`/project/${project.id}`)
-            //- Use first image in image_urls as thumbnail
             if project.image_urls && project.image_urls.length
               img.thumbnail(src=`/static/${project.image_urls[0]}`, alt=`Thumbnail of ${project.project_name}`)
             else

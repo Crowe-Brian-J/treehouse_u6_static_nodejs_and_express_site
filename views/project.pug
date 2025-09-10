@@ -11,25 +11,20 @@ block content
     .inner-wrapper.flex-row-wrap.two-col
       .project-info-box.box
 
-        //- Project title from data.json
         h1= project.project_name
 
-        //- Project description from data.json
         p= project.description
 
       .project-tech-links-box.box
         h6 Technologies
         ul
-          //- Loop through technologies array
           each tech in project.technologies
             li= tech
 
-        //- Links to live project and GitHub repo
         a.btn-link(href=project.live_link, target='_blank') Live Demo
         a.btn-link(href=project.github_link, target='_blank') GitHub Repo
 
     .project-img-box.box
-      //- Loop trhough image_urls array
       if project.image_urls && project.image_urls.length 
         each img, i in project.image_urls 
           img.project-img(src=`/static/${img}`, alt=`${project.project_name} screenshot ${i+1}`)
