@@ -4,7 +4,7 @@
 
 This project is a static portfolio website built with Node.js and Express, designed to showcase a collection of projects. It demonstrates server-side rendering using Express, templated views with Pug, and static asset handling.
 
-## Extra Credit
+## I am going for Exceeds Expectations
 
 [X] - Set up package.json file so that running 'npm start' will run the app
 [X] - Render Helpful Pug Templates in Error-Handling Middleware
