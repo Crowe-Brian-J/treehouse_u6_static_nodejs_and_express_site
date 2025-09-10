@@ -15,5 +15,14 @@
   [X] - EE - The error.pug and page-not-found.pug templates have been created and added to the views folder
   [X] - The following templates are present:
     layout.pug, index.pug, about.pug, project.pug
-  [] - Templates have all of the required information as exampled in the provided HTML and mockup files:
+  [X] - Templates have all of the required information as exampled in the provided HTML and mockup files:
     name, titles, descriptions, project descriptions, project images, links
+  [X] - Starter comments have been removed from pug files
+5. Errors
+  [X] - EE - When app is pointed at undefined routes such as '/noroute' and '/project/noroute', the app displays the page-not-found template, which displays the error's status and message properties
+  [X] - App logs out a friendly error message to the console when the app is pointed at undefined routes such as '/noroute' and '/project/noroute'
+6. Layout, CSS, and Styles
+  [X] - EE - Project has at least 3 of the following items customized:
+    color, background color, font, box or text shadows, transtitions or animations, add a looking
+  [X] - EE - Changes detailed in README.md file
+  [X] - Final project's style, layout, and positioning matches the example HTML or mockup files

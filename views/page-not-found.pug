@@ -8,5 +8,8 @@ block content
     if err && err.message
       p= err.message
     if err && err.stack
-      pre= err.stack
-    a.btn(href='/') &larr; Back to Home
+      pre= err.stack 
+    nav.nav
+      a(href='/')
+        span &larr;
+        | Back to Home

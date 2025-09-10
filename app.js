@@ -35,7 +35,7 @@ app.get('/project/:id', (req, res, next) => {
   if (project) {
     res.render('project', { project, currentPage: 'project' })
   } else {
-    const err = new Error('Project not found') // <- create Error object
+    const err = new Error('Sorry, project not found') // <- create Error object
     err.status = 404
     next(err) // pass it to error handlers
   }
